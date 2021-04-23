@@ -1,16 +1,7 @@
 
-# Welcome to your CDK Python project!
+# Welcome to my CDK Python project!
 
-This is a blank project for Python development with CDK.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-This project is set up like a standard Python project.  The initialization
-process also creates a virtualenv within this project, stored under the `.venv`
-directory.  To create the virtualenv it assumes that there is a `python3`
-(or `python` for Windows) executable in your path with access to the `venv`
-package. If for any reason the automatic creation of the virtualenv fails,
-you can create the virtualenv manually.
+The `cdk.json` file tells the CDK Toolkit how to execute the app.
 
 To manually create a virtualenv on MacOS and Linux:
 
@@ -42,6 +33,14 @@ At this point you can now synthesize the CloudFormation template for this code.
 ```
 $ cdk synth
 ```
+
+To test the loadtest, go to the repository 
+
+```
+$ docker run --rm -d --env BASE_URL=$BASE_URL -v `pwd`/artifacts:/tmp/artifacts cdk-loadtest
+
+```
+
 
 To add additional dependencies, for example other CDK libraries, just add
 them to your `setup.py` file and rerun the `pip install -r requirements.txt`
