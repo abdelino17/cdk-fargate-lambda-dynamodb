@@ -41,7 +41,6 @@ $ docker run --rm -d --env BASE_URL=$BASE_URL -v `pwd`/artifacts:/tmp/artifacts 
 
 ```
 
-
 To add additional dependencies, for example other CDK libraries, just add
 them to your `setup.py` file and rerun the `pip install -r requirements.txt`
 command.
